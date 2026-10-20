@@ -6,11 +6,41 @@ import { createOrder, orderInputSchema } from "@/lib/order";
 
 export const runtime = "nodejs";
 
+function normalizeOrigin(value: string | null | undefined) {
+  if (!value) return null;
+  try {
+    return new URL(value.trim()).origin;
+  } catch {
+    return null;
+  }
+}
+
+function getAllowedOrigins(request: NextRequest) {
+  const origins = new Set<string>();
+
+  for (const configured of [process.env.FRONTEND_URL, process.env.NEXT_PUBLIC_SITE_URL]) {
+    for (const value of configured?.split(",") || []) {
+      const origin = normalizeOrigin(value);
+      if (origin) origins.add(origin);
+    }
+  }
+
+  origins.add(request.nextUrl.origin);
+
+  const forwardedHost = request.headers.get("x-forwarded-host")?.split(",")[0]?.trim();
+  const host = forwardedHost || request.headers.get("host");
+  const forwardedProtocol = request.headers.get("x-forwarded-proto")?.split(",")[0]?.trim();
+  const protocol = forwardedProtocol || request.nextUrl.protocol.replace(":", "");
+  const currentOrigin = normalizeOrigin(host ? `${protocol}://${host}` : null);
+  if (currentOrigin) origins.add(currentOrigin);
+
+  return origins;
+}
+
 export async function POST(request: NextRequest) {
   try {
-    const allowedOrigin = process.env.FRONTEND_URL;
-    const origin = request.headers.get("origin");
-    if (allowedOrigin && origin && new URL(origin).origin !== new URL(allowedOrigin).origin) {
+    const origin = normalizeOrigin(request.headers.get("origin"));
+    if (origin && !getAllowedOrigins(request).has(origin)) {
       return NextResponse.json({ success: false, error: "Request origin is not allowed." }, { status: 403 });
     }
 
