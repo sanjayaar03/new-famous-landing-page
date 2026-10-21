@@ -14,15 +14,15 @@ export default function CheckoutPage() {
           </Link>
           <Link
             href="/"
-            className="relative block h-16 w-[176px] overflow-hidden rounded-md border border-[#d8b86c]/45 bg-black shadow-[0_0_22px_rgba(216,184,108,0.16)] sm:w-[220px]"
+            className="relative block h-16 w-[130px] overflow-hidden rounded-md border border-[#d8b86c]/40 bg-[#102846] shadow-[0_0_22px_rgba(216,184,108,0.14)]"
             aria-label="New Famous Tailor home"
           >
             <Image
-              src="/images/new-famous-tailor-logo.jpeg"
+              src="/images/new-famous-tailor-logo-navy.png"
               alt="New Famous Tailor logo"
               fill
-              sizes="(max-width: 640px) 176px, 220px"
-              className="object-contain [filter:brightness(1.55)_saturate(1.3)_contrast(1.08)]"
+              sizes="130px"
+              className="object-contain [filter:brightness(1.22)_saturate(1.15)_contrast(1.05)]"
               priority
             />
           </Link>
