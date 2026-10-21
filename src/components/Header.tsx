@@ -7,11 +7,11 @@ export function Header() {
       <div className="container-shell flex h-24 items-center justify-between">
         <Link
           href="/"
-          className="relative block h-[82px] w-[152px] overflow-hidden rounded-md border border-[#d8b86c]/55 bg-[#f8f8f8] shadow-[0_0_28px_rgba(216,184,108,0.18)]"
+          className="relative block h-[82px] w-[152px] overflow-hidden rounded-md border border-[#981f2d]/60 bg-[#f4c542] shadow-[0_0_28px_rgba(244,197,66,0.22)]"
           aria-label="New Famous Tailor home"
         >
           <Image
-            src="/images/new-famous-tailor-logo-light.jpeg"
+            src="/images/new-famous-tailor-logo-yellow-red.png"
             alt="New Famous Tailor logo"
             fill
             sizes="152px"
