@@ -12,13 +12,17 @@ export default function CheckoutPage() {
           <Link href="/" className="flex items-center gap-2 text-sm text-white/70 hover:text-white">
             <ArrowLeft size={16} /> Back
           </Link>
-          <Link href="/" className="relative block h-16 w-[176px] sm:w-[220px]" aria-label="New Famous Tailor home">
+          <Link
+            href="/"
+            className="relative block h-16 w-[176px] overflow-hidden rounded-md border border-[#d8b86c]/45 bg-black shadow-[0_0_22px_rgba(216,184,108,0.16)] sm:w-[220px]"
+            aria-label="New Famous Tailor home"
+          >
             <Image
               src="/images/new-famous-tailor-logo.jpeg"
               alt="New Famous Tailor logo"
               fill
               sizes="(max-width: 640px) 176px, 220px"
-              className="object-contain"
+              className="object-contain [filter:brightness(1.55)_saturate(1.3)_contrast(1.08)]"
               priority
             />
           </Link>
