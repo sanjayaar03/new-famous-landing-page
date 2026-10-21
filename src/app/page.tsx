@@ -31,7 +31,7 @@ export default function Home() {
         <div className="container-shell relative z-10 flex min-h-[760px] items-center pt-24">
           <div className="hero-sequence max-w-2xl py-20">
             <p className="eyebrow">New Famous Tailor • Signature Collection</p>
-            <h1 className="mt-6 font-display text-6xl font-semibold leading-[.9] sm:text-7xl lg:text-[6.4rem]">Dress smart.<br /><span className="text-[#d8b86c]">Arrive confident.</span></h1>
+            <h1 className="mt-6 font-display text-6xl font-semibold leading-[.9] sm:text-7xl lg:text-[6.4rem]">Dress smart.<br /><span className="text-[#FBCC36]">Arrive confident.</span></h1>
             <p className="mt-7 max-w-xl text-base leading-8 text-white/72 sm:text-lg">A refined three-piece suit for weddings, celebrations, and the professional moments that matter. One complete look, tailored around you.</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/checkout?quantity=1" className="gold-button">Purchase now <ArrowRight size={18} /></Link>
@@ -49,7 +49,7 @@ export default function Home() {
       <section className="bg-white py-5 shadow-sm" data-reveal>
         <div className="container-shell grid gap-4 sm:grid-cols-3">
           {[{ icon: ShieldCheck, t: "Cash on Delivery", s: "Pay when your order arrives" }, { icon: Truck, t: "Careful Delivery", s: "Orders delivered 10am–5pm" }, { icon: Headphones, t: "Personal Support", s: "Confirmation call from our team" }].map(({ icon: Icon, t, s }) => (
-            <div key={t} className="flex items-center justify-center gap-3 py-3 sm:border-r sm:last:border-0"><Icon className="text-[#b88939]" size={22} /><span><strong className="block text-sm text-[#142b4a]">{t}</strong><span className="text-xs text-[#738094]">{s}</span></span></div>
+            <div key={t} className="flex items-center justify-center gap-3 py-3 sm:border-r sm:last:border-0"><Icon className="text-[#FBCC36]" size={22} /><span><strong className="block text-sm text-[#142b4a]">{t}</strong><span className="text-xs text-[#738094]">{s}</span></span></div>
           ))}
         </div>
       </section>
@@ -64,7 +64,7 @@ export default function Home() {
           </div>
           <div className="motion-card-grid mt-14 grid gap-px overflow-hidden rounded-sm bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
             {benefits.map(({ icon: Icon, title, text }, index) => (
-              <article key={title} className="bg-[#102541] p-7 lg:min-h-64"><span className="font-display text-sm text-[#d8b86c]">0{index + 1}</span><Icon className="mt-8 text-[#d8b86c]" size={28} /><h3 className="mt-5 font-display text-2xl font-semibold">{title}</h3><p className="mt-3 text-sm leading-6 text-white/58">{text}</p></article>
+              <article key={title} className="bg-[#102541] p-7 lg:min-h-64"><span className="font-display text-sm text-[#FBCC36]">0{index + 1}</span><Icon className="mt-8 text-[#FBCC36]" size={28} /><h3 className="mt-5 font-display text-2xl font-semibold">{title}</h3><p className="mt-3 text-sm leading-6 text-white/58">{text}</p></article>
             ))}
           </div>
           <div className="mt-10 text-center"><Link href="/checkout?quantity=1" className="gold-button">Buy now for {formatNpr(PRODUCT.price)} <ArrowRight size={18} /></Link></div>
@@ -76,7 +76,7 @@ export default function Home() {
           <div className="mx-auto max-w-2xl text-center"><p className="eyebrow">Customer impressions</p><h2 className="section-title mt-4">A look people remember.</h2><p className="mt-5 text-sm leading-6 text-[#697587]">Sample review copy supplied for layout preview. Replace with verified customer feedback and names before publishing.</p></div>
           <div className="motion-card-grid mt-12 grid gap-5 md:grid-cols-3">
             {testimonials.map((quote, index) => (
-              <figure key={quote} className="relative rounded-sm border border-[#0b1c35]/10 bg-[#faf9f6] p-7"><div className="font-display text-5xl leading-none text-[#c79b4a]">“</div><blockquote className="mt-4 font-display text-2xl leading-8 text-[#142b4a]">{quote}</blockquote><figcaption className="mt-7 border-t border-[#0b1c35]/10 pt-5 text-xs font-bold uppercase tracking-widest text-[#748094]">Sample customer {index + 1} • Unverified</figcaption></figure>
+              <figure key={quote} className="relative rounded-sm border border-[#0b1c35]/10 bg-[#faf9f6] p-7"><div className="font-display text-5xl leading-none text-[#FBCC36]">“</div><blockquote className="mt-4 font-display text-2xl leading-8 text-[#142b4a]">{quote}</blockquote><figcaption className="mt-7 border-t border-[#0b1c35]/10 pt-5 text-xs font-bold uppercase tracking-widest text-[#748094]">Sample customer {index + 1} • Unverified</figcaption></figure>
             ))}
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function Home() {
 
       <section className="final-cta relative overflow-hidden bg-[#071426] py-24 text-center text-white" data-reveal>
         <div className="absolute inset-0 opacity-15"><Image src="/images/jacket-lapel.png" alt="" fill sizes="100vw" className="object-cover" /></div>
-        <div className="container-shell relative"><CheckCircle2 className="mx-auto text-[#d8b86c]" size={34} /><p className="eyebrow mt-6">Find your perfect fit</p><h2 className="mx-auto mt-4 max-w-4xl font-display text-5xl font-semibold leading-none sm:text-7xl">Make your next occasion look exceptional.</h2><p className="mx-auto mt-6 max-w-xl text-sm leading-7 text-white/65">Place your cash-on-delivery order today. Our sales representative will call to confirm your order and discuss fit, colour, and available options.</p><Link href="/checkout?quantity=1" className="gold-button mt-9">Order your suit <ArrowRight size={18} /></Link></div>
+        <div className="container-shell relative"><CheckCircle2 className="mx-auto text-[#FBCC36]" size={34} /><p className="eyebrow mt-6">Find your perfect fit</p><h2 className="mx-auto mt-4 max-w-4xl font-display text-5xl font-semibold leading-none sm:text-7xl">Make your next occasion look exceptional.</h2><p className="mx-auto mt-6 max-w-xl text-sm leading-7 text-white/65">Place your cash-on-delivery order today. Our sales representative will call to confirm your order and discuss fit, colour, and available options.</p><Link href="/checkout?quantity=1" className="gold-button mt-9">Order your suit <ArrowRight size={18} /></Link></div>
       </section>
 
       <footer className="bg-[#06101f] py-8 text-white/55"><div className="container-shell flex flex-col gap-3 text-center text-xs sm:flex-row sm:justify-between sm:text-left"><span>© {new Date().getFullYear()} New Famous Tailor</span><span>Perfect Fit. Timeless Style. • Cash on Delivery</span></div></footer>

@@ -20,7 +20,7 @@ export function Faq() {
       {faqs.map(([question, answer], index) => (
         <div key={question} className="border-b border-[#0b1c35]/15">
           <button onClick={() => setOpen(open === index ? -1 : index)} aria-expanded={open === index} className="flex w-full items-center justify-between gap-6 py-6 text-left font-semibold text-[#142b4a]">
-            <span>{question}</span><Plus className={`shrink-0 text-[#b88a38] transition ${open === index ? "rotate-45" : ""}`} size={20} />
+            <span>{question}</span><Plus className={`shrink-0 text-[#FBCC36] transition ${open === index ? "rotate-45" : ""}`} size={20} />
           </button>
           <div className={`grid transition-all duration-300 ${open === index ? "grid-rows-[1fr] pb-6" : "grid-rows-[0fr]"}`}><p className="overflow-hidden text-sm leading-7 text-[#637084]">{answer}</p></div>
         </div>

@@ -61,20 +61,20 @@ export function CheckoutForm() {
           <Field label="Email address" name="email" value={fields.email} error={errors.email} onChange={update} placeholder="you@example.com" autoComplete="email" inputMode="email" />
           <div className="sm:col-span-2"><label className="mb-2 block text-sm font-bold text-[#24354d]" htmlFor="location">Exact location</label><textarea id="location" rows={4} value={fields.location} onChange={(e) => update("location", e.target.value)} placeholder="Kindly share your exact location" autoComplete="street-address" className={`field resize-none ${errors.location ? "field-error" : ""}`} aria-invalid={!!errors.location} />{errors.location && <p className="mt-1 text-xs text-[#b42318]">{errors.location}</p>}</div>
         </div>
-        <div className="mt-7 rounded-lg bg-[#f4f1e9] p-4 text-sm text-[#526071]"><div className="flex gap-3"><CheckCircle2 className="mt-0.5 shrink-0 text-[#a77929]" size={20} /><p><strong className="text-[#1c2d44]">No online payment required.</strong><br />Pay in cash when your order is delivered.</p></div></div>
+        <div className="mt-7 rounded-lg bg-[#f4f1e9] p-4 text-sm text-[#526071]"><div className="flex gap-3"><CheckCircle2 className="mt-0.5 shrink-0 text-[#FBCC36]" size={20} /><p><strong className="text-[#1c2d44]">No online payment required.</strong><br />Pay in cash when your order is delivered.</p></div></div>
       </section>
 
       <aside className="rounded-xl bg-[#0b1c35] p-6 text-white shadow-[0_24px_70px_rgba(11,28,53,.2)] sm:p-7 lg:sticky lg:top-6">
-        <p className="text-xs font-bold uppercase tracking-[.18em] text-[#d8b86c]">Order summary</p><h2 className="mt-3 font-display text-3xl font-semibold">{PRODUCT.name}</h2>
+        <p className="text-xs font-bold uppercase tracking-[.18em] text-[#FBCC36]">Order summary</p><h2 className="mt-3 font-display text-3xl font-semibold">{PRODUCT.name}</h2>
         <div className="mt-6 space-y-4 border-y border-white/12 py-5 text-sm">
           <div className="flex items-center justify-between gap-4"><span className="text-white/58">Price per piece</span><strong>{formatNpr(PRODUCT.price)}</strong></div>
           <div className="flex items-center justify-between gap-4"><span className="text-white/58">Quantity</span><div className="flex items-center rounded border border-white/20"><button type="button" onClick={() => setQuantity((q) => Math.max(1, q - 1))} className="grid size-9 place-items-center" aria-label="Decrease quantity"><Minus size={14} /></button><strong className="w-7 text-center">{quantity}</strong><button type="button" onClick={() => setQuantity((q) => Math.min(10, q + 1))} className="grid size-9 place-items-center" aria-label="Increase quantity"><Plus size={14} /></button></div></div>
           <div className="flex items-center justify-between gap-4"><span className="text-white/58">Delivery fee</span><strong>{formatNpr(PRODUCT.deliveryFee)}</strong></div>
         </div>
-        <div className="flex items-end justify-between py-5"><span className="text-sm text-white/65">Total to pay</span><strong className="font-display text-3xl text-[#e1c581]">{formatNpr(total)}</strong></div>
+        <div className="flex items-end justify-between py-5"><span className="text-sm text-white/65">Total to pay</span><strong className="font-display text-3xl text-[#FBCC36]">{formatNpr(total)}</strong></div>
         {apiError && <div role="alert" className="mb-4 rounded-md border border-red-300/30 bg-red-400/10 p-3 text-sm leading-5 text-red-100">{apiError}</div>}
         <button disabled={submitting} className="gold-button w-full disabled:cursor-not-allowed disabled:opacity-65">{submitting ? <><LoaderCircle className="animate-spin" size={18} /> Submitting Order...</> : <>Order now — Cash on Delivery</>}</button>
-        <div className="mt-5 space-y-2 text-xs text-white/55"><p className="flex items-center gap-2"><LockKeyhole size={14} className="text-[#d8b86c]" /> Your information is sent securely.</p><p className="flex items-center gap-2"><Truck size={14} className="text-[#d8b86c]" /> Delivery window: 10am–5pm.</p><p className="flex items-center gap-2"><ShieldCheck size={14} className="text-[#d8b86c]" /> Confirmation call before processing.</p></div>
+        <div className="mt-5 space-y-2 text-xs text-white/55"><p className="flex items-center gap-2"><LockKeyhole size={14} className="text-[#FBCC36]" /> Your information is sent securely.</p><p className="flex items-center gap-2"><Truck size={14} className="text-[#FBCC36]" /> Delivery window: 10am–5pm.</p><p className="flex items-center gap-2"><ShieldCheck size={14} className="text-[#FBCC36]" /> Confirmation call before processing.</p></div>
       </aside>
     </form>
   );

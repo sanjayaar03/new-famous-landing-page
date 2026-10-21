@@ -49,12 +49,12 @@ export function ProductShowcase() {
           <p className="mt-5 max-w-xl text-base leading-7 text-[#526071]">A coordinated three-piece look designed to make important occasions feel effortless. Classic structure, refined detail, and styling flexibility in one complete set.</p>
 
           <div className="mt-7 space-y-3">
-            {benefits.map((benefit) => <div key={benefit} className="flex items-start gap-3 text-sm font-semibold text-[#25344a]"><span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-[#d9b66f]/25 text-[#9a6a1c]"><Check size={13} strokeWidth={3} /></span>{benefit}</div>)}
+            {benefits.map((benefit) => <div key={benefit} className="flex items-start gap-3 text-sm font-semibold text-[#25344a]"><span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-[#d9b66f]/25 text-[#FBCC36]"><Check size={13} strokeWidth={3} /></span>{benefit}</div>)}
           </div>
 
           <div className="mt-8 flex items-end gap-4 border-y border-[#0b1c35]/10 py-6">
             <div><p className="text-xs uppercase tracking-widest text-[#758093]">Offer price</p><p className="mt-1 font-display text-4xl font-bold text-[#0b1c35]">{formatNpr(PRODUCT.price)}</p></div>
-            <div className="pb-1"><p className="text-sm text-[#8490a0] line-through">{formatNpr(PRODUCT.regularPrice)}</p><p className="text-xs font-extrabold uppercase tracking-wider text-[#9b6a1b]">Save 30%</p></div>
+            <div className="pb-1"><p className="text-sm text-[#8490a0] line-through">{formatNpr(PRODUCT.regularPrice)}</p><p className="text-xs font-extrabold uppercase tracking-wider text-[#FBCC36]">Save 30%</p></div>
           </div>
 
           <div className="mt-7 flex flex-wrap items-center justify-between gap-5">
@@ -75,8 +75,8 @@ export function ProductShowcase() {
 
           <Link href={`/checkout?quantity=${quantity}`} className="gold-button mt-7 w-full text-base">Purchase now <ChevronRight size={18} /></Link>
           <div className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs font-semibold text-[#5d6979]">
-            <span className="flex items-center gap-2"><ShieldCheck size={16} className="text-[#a77929]" /> Cash on delivery</span>
-            <span className="flex items-center gap-2"><Truck size={16} className="text-[#a77929]" /> Delivery 10am–5pm</span>
+            <span className="flex items-center gap-2"><ShieldCheck size={16} className="text-[#FBCC36]" /> Cash on delivery</span>
+            <span className="flex items-center gap-2"><Truck size={16} className="text-[#FBCC36]" /> Delivery 10am–5pm</span>
           </div>
         </div>
       </div>

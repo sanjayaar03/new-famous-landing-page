@@ -19,7 +19,7 @@ export function Header() {
             priority
           />
         </Link>
-        <Link href="/checkout?quantity=1" className="hidden rounded-sm border border-[#d8b86c]/70 px-5 py-2.5 text-sm font-bold text-[#ead69f] sm:block">Order now</Link>
+        <Link href="/checkout?quantity=1" className="hidden rounded-sm border border-[#d8b86c]/70 px-5 py-2.5 text-sm font-bold text-[#FBCC36] sm:block">Order now</Link>
       </div>
     </header>
   );
