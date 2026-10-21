@@ -18,7 +18,7 @@ export default function CheckoutPage() {
             aria-label="New Famous Tailor home"
           >
             <Image
-              src="/images/new-famous-tailor-logo-yellow-red.png"
+              src="/images/new-famous-tailor-logo-yellow-red-bold.png"
               alt="New Famous Tailor logo"
               fill
               sizes="119px"
