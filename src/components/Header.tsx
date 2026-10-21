@@ -7,15 +7,15 @@ export function Header() {
       <div className="container-shell flex h-24 items-center justify-between">
         <Link
           href="/"
-          className="relative block h-[82px] w-[166px] overflow-hidden rounded-md border border-[#d8b86c]/45 bg-[#102846] shadow-[0_0_28px_rgba(216,184,108,0.16)]"
+          className="relative block h-[82px] w-[152px] overflow-hidden rounded-md border border-[#d8b86c]/55 bg-[#f8f8f8] shadow-[0_0_28px_rgba(216,184,108,0.18)]"
           aria-label="New Famous Tailor home"
         >
           <Image
-            src="/images/new-famous-tailor-logo-navy.png"
+            src="/images/new-famous-tailor-logo-light.jpeg"
             alt="New Famous Tailor logo"
             fill
-            sizes="166px"
-            className="object-contain object-left [filter:brightness(1.22)_saturate(1.15)_contrast(1.05)]"
+            sizes="152px"
+            className="object-contain object-left"
             priority
           />
         </Link>
